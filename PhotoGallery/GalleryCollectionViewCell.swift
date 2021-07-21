@@ -9,4 +9,6 @@ import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var catImageView: UIImageView!
+    
 }
