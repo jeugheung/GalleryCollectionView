@@ -20,6 +20,14 @@ class PhotosCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pickSegue" {
+            let photoVC = segue.destination as! PhotoViewController
+            let cell = sender as! GalleryCollectionViewCell
+            photoVC.image = cell.catImageView.image
+        }
+    }
 
     // MARK: UICollectionViewDataSource
 
